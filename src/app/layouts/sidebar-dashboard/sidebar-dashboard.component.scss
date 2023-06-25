@@ -1,0 +1,133 @@
+
+// .example-container {
+//   width: 100%;
+//   height: 800px;
+//   margin: 5px;
+// }
+
+
+// /* Use media queries to adjust the width of the drawer for different screen sizes */
+// @media (max-width: 600px) {
+//   /* For mobile devices, set the drawer width to 80% */
+//   .mat-drawer {
+//     width: 2%;
+//   }
+// }
+
+// @media (min-width: 601px) and (max-width: 1024px) {
+//   /* For tablet devices, set the drawer width to 50% */
+//   .mat-drawer {
+//     width: 25%;
+//   }
+// }
+
+// @media (min-width: 1025px) {
+//   /* For desktop devices, set the drawer width to 25% */
+//   .mat-drawer {
+//     width: 50%;
+//   }
+// }
+
+// /* Style the navigation list items */
+// .mat-nav-list a {
+//   display: block;
+//   padding: 0px;
+//   color: black;
+//   text-decoration: none;
+// }
+
+// /* Change the background color and text color of the active list item */
+// .mat-nav-list a.active {
+//   background-color: lightblue;
+//   color: white;
+// }
+
+
+
+// /* Use media queries to adjust the width of the drawer for different screen sizes */
+// @media (max-width: 600px) {
+//   /* For mobile devices, set the drawer width to 80% */
+// li{
+
+// }
+// }
+
+// @media (min-width: 601px) and (max-width: 1024px) {
+//   /* For tablet devices, set the drawer width to 50% */
+//   li{
+//   text-align: left;
+//   border-top: 1px solid #fff;
+//   width: 100px;
+//   color: #fff;
+// }
+// }
+
+// @media (min-width: 1025px) {
+//   /* For desktop devices, set the drawer width to 25% */
+//   li{
+//   text-align: left;
+//   border-top: 1px solid #fff;
+//   width: 150px;
+//   color: #fff;
+// }
+// }
+
+
+.sidebar-nav {
+  width: 270px;
+}
+.sidebar-link {
+  display: flex;
+  align-items: center;
+}
+.sidebar-link .right-icon {
+  display: inline-flex;
+}
+.sidebar-link[aria-expanded="true"] .right-icon {
+  transform: rotate(180deg);
+}
+@media (min-width: 992px) {
+  
+  .whole {
+    overflow: auto !important;
+  }
+  main {
+    margin-left: 270px;
+  }
+  /* this is to remove the backdrop */
+  .offcanvas-backdrop::before {
+    display: none;
+  }
+  .sidebar-nav {
+    -webkit-transform: none;
+    transform: none;
+    visibility: visible !important;
+    height: calc(100% - 8%);
+    top: 56px;
+  }
+}
+
+.content{
+  padding-top: 6%;
+  
+}
+
+
+.dropdown-menu {
+ 
+  padding: 1px;
+  background-color: lightblue;
+}
+
+.dropdown-item {
+  color: white;
+}
+
+.dropdown-item:hover {
+  background-color: dodgerblue;
+}
+
+hr{
+  background-color: white;
+  color: white;
+}

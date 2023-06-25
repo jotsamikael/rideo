@@ -1,0 +1,199 @@
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use '@angular/material' as mat;
+// Plus imports for other components in your app.
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat.core();
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$sellmate-primary: mat.define-palette(mat.$indigo-palette);
+$sellmate-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+// The warn palette is optional (defaults to red).
+$sellmate-warn: mat.define-palette(mat.$red-palette);
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$sellmate-theme: mat.define-light-theme(( color: ( primary: $sellmate-primary, accent: $sellmate-accent, warn: $sellmate-warn, )));
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include mat.all-component-themes($sellmate-theme);
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;500;600;700&display=swap');
+
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+
+
+
+.datepickerIput { width: 10px; height: 20px; }
+
+/*--------------------------------------------------------------
+# # MAT DATE PICKER START
+--------------------------------------------------------------*/
+.datepickerOne {
+  background: lightblue;
+
+}
+ 
+.datepickerOne .mat-calendar-body-today:not(.mat-calendar-body-selected){
+  border-color: rgb(9, 61, 112);
+  border-width: 2px;
+}
+
+.mat-datepicker-content .datepickerOne.mat-calendar {
+    width: 300px;
+    height: auto;
+}
+
+/*--------------------------------------------------------------
+# MAT DATE PICKER END
+--------------------------------------------------------------*/
+
+:root {
+    --color-body: #2d3233;
+    --color-heading: #e9a20a;
+    --color-base: #030847;
+    --color-base2: #f6f9fd;
+    --color-brand: #e9a20a;
+    --color-brand2: #e9a20a;
+    --sidbar-width: 200px;
+    --font-base: "Bai Jamjuree";
+    --margin-line: #941c5a;
+    --lines: #1d97b8;
+}
+
+*{
+ font-family: var(--font-base), sans-serif;
+   
+}
+
+button {
+    height: max-content;
+    width: max-content;
+}
+$dark-color: #000000ec;
+$primary-color: #725df5;
+$text-primary: rgb(147, 129, 255), 129, 255;
+$sub-title-color: #858585bd;
+$burger-menu-color: #e9ecef;
+$dark-contain-color:#1e1e1e;
+$note-color: #725df5;
+
+/*
+* {
+    padding: 0;
+    margin: 0;
+}
+
+ *{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+
+}*/
+
+
+a {
+  color: #725df5;
+  text-decoration: none;
+}
+
+h1{
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: rgb(35,35,85);
+}
+
+h2{
+    
+     color: rgb(50, 50, 121);
+     margin-bottom: 50px;
+     font-size: 24px;
+     font-weight: 400;
+     line-height: 2rem;
+}
+
+
+h6{
+    font-size: 1.1rem;
+   
+    color: rgb(24,24,49);
+}
+html, body { height: 100%; }
+
+
+/*:root {
+  --offcanvas-width: 270px;
+  --topNavbarHeight: 56px;
+}*/
+.sidebar-nav {
+  width: var(--offcanvas-width);
+}
+.sidebar-link {
+  display: flex;
+  align-items: center;
+}
+.sidebar-link .right-icon {
+  display: inline-flex;
+}
+.sidebar-link[aria-expanded="true"] .right-icon {
+  transform: rotate(180deg);
+}
+@media (min-width: 992px) {
+  
+  .whole {
+    overflow: auto !important;
+  }
+  main {
+    margin-left: var(--offcanvas-width);
+  }
+  /* this is to remove the backdrop */
+  .offcanvas-backdrop::before {
+    display: none;
+  }
+  .sidebar-nav {
+    -webkit-transform: none;
+    transform: none;
+    visibility: visible !important;
+    height: calc(100% - var(--topNavbarHeight));
+    top: var(--topNavbarHeight);
+  }
+}
+
+
+
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+mat-icon {
+    vertical-align: middle;
+    color: $primary-color;
+}
+
+.logo {
+    justify-self: start;
+    margin-left: 6vw;
+    font-weight: bold;
+    font-size: x-large;
+    span:nth-child(2) {
+        color: $primary-color;
+    }
+}
+
+
+
+/* Icône burger */
+
+.burger-icon span {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background-color: $burger-menu-color;
+    margin: 6px 0;
+}
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';

@@ -1,0 +1,231 @@
+<app-nav></app-nav>
+
+<div class="multistep">
+
+    <mat-horizontal-stepper [linear]="isLinear" #stepper>
+        <mat-step>
+            <form [formGroup]="personalInfo">
+                <ng-template matStepLabel>Information personnel</ng-template>
+                 
+                <div class="row">
+                    <div class="col-9">
+                        <div class="row">
+                            <div class="col-3">
+                                <div class="form-group">
+                                    <label for="firstname">Nom:</label>
+                        
+                                    <input type="text" class="form-control" name="firstname" formControlName="firstname"
+                                        placeholder="Enter branch name">
+                        
+                                    <div *ngIf="f.firstname.touched && f.firstname.invalid" class="alert alert-danger mt-1">
+                        
+                                        <div *ngIf="f.firstname.errors.required">Votre nom est requi.</div>
+                                        <div *ngIf="f.firstname.errors.minlength">Le nom doit avoir aumoins 2 caractères.</div>
+                        
+                                        <div *ngIf="f.firstname.errors.maxlength">Le nom doit avoir moins 30 caractères..</div>
+                        
+                        
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-3">
+                                <div class="form-group">
+                                    <label for="lastname">Prénom:</label>
+                        
+                                    <input type="text" class="form-control" name="nameBranch" formControlName="lastname"
+                                        placeholder="Enter branch name">
+                        
+                                    <div *ngIf="f.lastname.touched && f.lastname.invalid" class="alert alert-danger mt-1">
+                        
+                                        <div *ngIf="f.lastname.errors.required">Votre prénom est requi.</div>
+                                        <div *ngIf="f.lastname.errors.minlength">Le prénom doit avoir aumoins 2 caractères.
+                                        </div>
+                        
+                                        <div *ngIf="f.lastname.errors.maxlength">Le prénom doit avoir moins 30 caractères..
+                                        </div>
+                        
+                        
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-4">
+                                <div class="form-group">
+                                    <label for="sex">Votre Genre:</label>
+                                    <p></p>
+                                    <span *ngFor="let gender of this.genders" class="m-1">
+                                    <input class="form-check-input" type="radio"  id={{gender.id}} value={{gender.value}} >
+                                    <label for="Homme">{{gender.value}}</label>
+                                    </span>
+                        
+                                </div>
+                            </div>
+
+                           
+                        
+                        
+                        </div>
+                        
+                        <div class="row mt-5">
+                            <div class="col-3">
+                                <div class="form-group">
+                                    <label for="phone">Contact whatsapp:</label>
+                        
+                                    <input type="text" class="form-control" name="phone" formControlName="phone"
+                                        placeholder="Entre votre conatct whatsapp">
+                        
+                                    <div *ngIf="f.phone.touched && f.phone.invalid" class="alert alert-danger mt-1">
+                        
+                                        <div *ngIf="f.phone.errors.required">Votre nom est requi.</div>
+                                        <div *ngIf="f.phone.errors.minlength">Le nom doit avoir aumoins 2 caractères.</div>
+                        
+                                        <div *ngIf="f.phone.errors.maxlength">Le nom doit avoir moins 30 caractères..</div>
+                        
+                        
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- email here -->
+                            
+                            <div class="col-3">
+                            
+                                <div class="form-group">
+                                    <label for="email">E-mail:</label>
+                            
+                                    <input type="text" class="form-control" name="email" formControlName="email" placeholder="Entrer votre @ email">
+                            
+                                    <div *ngIf="f.email.touched && f.firstname.invalid" class="alert alert-danger mt-1">
+                            
+                                        <div *ngIf="f.email.errors.required">Votre nom est requi.</div>
+                                        <div *ngIf="f.email.errors.minlength">Le nom doit avoir aumoins 2 caractères.</div>
+                            
+                                        <div *ngIf="f.email.errors.maxlength">Le nom doit avoir moins 30 caractères..</div>
+                            
+                            
+                                    </div>
+                                </div>
+                            </div>
+                        
+                            <div class="col-4">
+                        
+                                <div class="form-group">
+                                    <label for="highestSchoolLovel">Votre niveau d'étude actuelle:</label>
+                        
+                                    <input type="text" class="form-control" name="highestSchoolLovel" formControlName="highestSchoolLovel"
+                                        placeholder="Entrer votre @ email">
+                        
+                                    <div *ngIf="f.highestSchoolLovel.touched && f.highestSchoolLovel.invalid" class="alert alert-danger mt-1">
+                        
+                                        <div *ngIf="f.highestSchoolLovel.errors.required">Votre nom est requi.</div>
+                                        <div *ngIf="f.highestSchoolLovel.errors.minlength">Le nom doit avoir aumoins 2 caractères.</div>
+                        
+                                        <div *ngIf="f.highestSchoolLovel.errors.maxlength">Le nom doit avoir moins 30 caractères..</div>
+                        
+                        
+                                    </div>
+                                </div>
+                            </div>
+                        
+                         
+                        
+                            <div class="row mt-5">
+                                <div class="col-3">
+                                    <div class="form-group">
+                                        <label for="presentSituation">Votre sitaution actuelle:</label>
+                        
+                                        <input type="text" class="form-control" name="presentSituation" formControlName="presentSituation"
+                                            placeholder="Entre votre conatct whatsapp">
+                        
+                                        <div *ngIf="f.presentSituation.touched && f.presentSituation.invalid" class="alert alert-danger mt-1">
+                        
+                                            <div *ngIf="f.presentSituation.errors.required">Votre nom est requi.</div>
+                                            <div *ngIf="f.presentSituation.errors.minlength">Le nom doit avoir aumoins 2 caractères.</div>
+                        
+                                            <div *ngIf="f.presentSituation.errors.maxlength">Le nom doit avoir moins 30 caractères..</div>
+                        
+                        
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                        
+                        
+                        </div>
+
+                    </div>
+                    <div class="col-3">
+                      <img src="../../assets/images/svg/undraw_teaching_re_g7e3.svg" alt="tutor1" srcset="" width="350px">
+
+                    </div>
+                </div>
+                
+                
+                <div class="mt-3">
+                    <button mat-button matStepperNext>Suivant</button>
+                </div>
+            </form>
+        </mat-step>
+        <mat-step>
+            <form [formGroup]="skillInfo">
+                <ng-template matStepLabel>Informations sur vos compétences</ng-template>
+                <div class="row">
+                    <div class="col-9">
+                        <div class="row">
+                            <div class="col-7">
+                                <ng-container *ngFor="let subject of subjects" >
+                                    <input type="checkbox" value={{subject}} class="m-2" (change)="handleSubjets($event)">
+
+                                    <label>{{subject}}</label>
+                                
+                                </ng-container>
+                                <div style="color: crimson;">
+                                    {{skillInfo.get('subjects')?.value}}
+                                </div>
+                            </div>
+                            <div class="col-5"></div>
+                            
+                        </div>
+
+                    </div>
+                    <div class="col-3">
+                    <img src="../../assets/images/svg/undraw_youtube_tutorial_re_69qc.svg" alt="tutor1" srcset="" width="350px">
+
+                    </div>
+                </div>
+                
+                
+                <div class="mt-4">
+                    <button mat-button matStepperPrevious>Retour</button>
+                    <button mat-button matStepperNext>Suivant</button>
+                </div>
+            </form>
+        </mat-step>
+
+        <mat-step>
+            <form [formGroup]="asideInfo">
+                <ng-template matStepLabel>Informations sur vos compétences</ng-template>
+                <mat-form-field>
+                    <input matInput placeholder="Address" formControlName="legallyAutorised" required>
+                </mat-form-field>
+                <div>
+                    <button mat-button matStepperPrevious>Retour</button>
+                    <button mat-button matStepperNext>Suivant</button>
+                </div>
+            </form>
+        </mat-step>
+        <mat-step>
+            <ng-template matStepLabel>Terminé</ng-template>
+            Vous avez terminer, Bravo.
+            <div>
+                <button mat-button matStepperPrevious>Retour</button>
+                <button mat-button (click)="stepper.reset()">Recommencer</button>
+            </div>
+        </mat-step>
+    </mat-horizontal-stepper>
+
+
+
+</div>
+<app-footer></app-footer>

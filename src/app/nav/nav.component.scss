@@ -1,0 +1,190 @@
+.navbar {
+    display: block;
+    max-width: 100%;
+    height: 12vh;
+    background-color: #000000ec;
+    color: white;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    place-items: center;
+    font-family: 'Poppins', sans-serif;
+    .options {
+        justify-self: end;
+        margin-right: 6vw;
+        display: flex;
+        gap: 10px;
+        button:nth-child(2),
+        button:first-child {
+            font-size: 16px;
+        }
+        button:nth-child(2) {
+            background-color: #00aff5;
+        }
+    }
+    .items {
+        font-weight: bold;
+        display: flex;
+        gap: 30px;
+        align-items: baseline;
+        button,
+        span {
+            cursor: pointer;
+        }
+    }
+}
+
+::ng-deep .menu {
+    max-width: none !important;
+    overflow-x: hidden;
+    .menu-item {
+        margin: 1.5vh 1vw 0 1vw;
+        padding: 1vh 1vw 1vh 1vw;
+        max-width: 40vw;
+        display: grid;
+        grid-template-columns: 10% 90%;
+        .item-title {
+            font-size: large;
+        }
+        .item-contain {
+            color: #858585bd;
+            font-size: small;
+        }
+    }
+    .last-item {
+        max-width: 40vw;
+        background-color: #f8f9fa82;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        span:first-child {
+            justify-self: start;
+        }
+        span:nth-child(2) {
+            justify-self: end;
+        }
+    }
+    .last-item * {
+        margin: 1.5vh 1vw 0 1vw;
+        padding: 1vh 1vw 1vh 1vw;
+        font-size: medium;
+        mat-icon {
+            vertical-align: middle;
+            color: #ced4da;
+        }
+    }
+}
+
+.last-item *:hover,
+.menu-item:hover {
+    cursor: pointer;
+    background-color: #e9ecef4e;
+}
+.logo span{
+    cursor: pointer;
+}
+
+.menu-smartphone {
+    z-index: 2;
+    position: absolute;
+    width: 86vw;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    font-size: large;
+    top: 1vh;
+    background-color: white;
+    right: 2vw;
+    padding: 3vw;
+    margin: 2vw;
+    border-radius: 10px;
+    animation: entranceMenu 1s ease 0s 1 normal forwards;
+    .head-menu-smartphone {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        div:first-child {
+            justify-self: start;
+            .logo {
+                margin-left: 0;
+                cursor: pointer;
+            }
+        }
+        div:last-child {
+            justify-self: end;
+            mat-icon {
+                color: #000;
+            }
+            mat-icon:hover {
+                background-color: #edede9;
+                cursor: pointer;
+                border-radius: 1px;
+            }
+        }
+    }
+    .menu-item {
+        display: grid;
+        grid-template-columns: 10% 90%;
+        margin: 3vh 0 3vh 0;
+        padding: 2vh;
+    }
+    .items-smartphone {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin: 3vh 0 3vh 0;
+        padding: 2vh;
+        gap: 30px;
+    }
+    .items-smartphone *:hover {
+        cursor: pointer;
+    }
+    .options-smartphone {
+        display: grid;
+        gap: 30px;
+        justify-items: center;
+        button {
+            background-color:#00aff5;
+            color: white;
+            width: 90%;
+            font-size: large;
+        }
+        span:first-child {
+            color: #adb5bd;
+            margin-right: 1vw;
+        }
+        span:last-child {
+            color:  rgba(42, 127, 238, 0.933);
+            cursor: pointer;
+        }
+    }
+}
+
+@keyframes entranceMenu {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .options>button,
+    div.items * {
+        display: none;
+    }
+    .options>div {
+        cursor: pointer;
+    }
+}
+
+@media screen and (min-width: 700px) {
+    .options>div {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .last-item * {
+        font-size: x-small;
+    }
+    .last-item {
+        max-width: 50vw;
+    }
+}

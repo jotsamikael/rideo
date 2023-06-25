@@ -1,0 +1,47 @@
+<div class="container">
+    <div class="card mt-3 p-5">
+        <div class="d-flex justify-content-around py-3">
+            <div class="score">
+                <h5>{{points}} points</h5>
+            </div>
+            <div class="question-remain">
+                <span><b>{{currentQuestion+1}}</b> sur  {{questionList.length}}</span>
+            </div>
+            <div class="timer">
+                <h5>{{counter}} sec ⏲</h5>
+            </div>
+        </div>
+
+        <div class="progress">
+            <div class="progress-bar progress-bar-striped bg-success" role="progressbar" [ngStyle]="{'width':progress+'%'}" aria-valuenow="25"
+                aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+
+            <div class="row question">
+                 
+                     <h3>{{questionList[currentQuestion]?.questionText}}</h3>
+                 
+            </div>
+
+            <div class="row options">
+               
+                    <ol *ngFor="let option of questionList[currentQuestion]?.options">
+                        <li (click)="answer(currentQuestion+1, option)"><div class="card">{{option.text}}</div></li>
+                       
+                    </ol>
+                
+
+            </div>
+            <div class="d-flex justify-content-between">
+                 <button [disabled]="currentQuestion===0" (click)="previousQuestion()" class="btn "><i class="fa fa-chevron-left fa-2x"></i></button>
+                 <button class="btn" (click)="resetQuiz()"><i class="fa fa-refresh fa-2x"></i></button>
+                 <button (click)="nextQuestion()" class="btn"><i class="fa fa-chevron-right fa-2x"></i></button>
+
+               
+                                    
+
+            </div>
+
+        
+    </div>
+</div>

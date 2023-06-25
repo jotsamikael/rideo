@@ -1,0 +1,141 @@
+<div class="navbar">
+    <div class="logo" [routerLink]="['/']" (click)="navigationMobile()">
+        <span>Ride</span>
+        <span>o</span>
+    </div>
+
+    <div class="items">
+        <span routerLink="/dashboard">Carpool</span>
+        <span routerLink="/faq">Bus</span>
+        <button mat-stroked-button [matMenuTriggerFor]="menuProducts">Products
+            <mat-icon>expand_more</mat-icon>
+        </button>
+    
+        <button mat-stroked-button [matMenuTriggerFor]="menuMore">More <mat-icon>expand_more</mat-icon></button>
+
+        <mat-menu #menuProducts="matMenu" class="menu">
+          
+            <div class="menu-item">
+                <mat-icon>help</mat-icon>
+                <div>
+                    <span class="item-title">Frequently asked questions</span><br>
+                    <span class="item-contain">Create a WhatsApp link to start a chat with your customers.</span>
+                </div>
+            </div>
+            <div class="menu-item">
+                <mat-icon>cell_tower</mat-icon>
+                <div>
+                    <span class="item-title">WhatsApp Broadcast List Manager</span><br>
+                    <span class="item-contain">Manager WhatsApp Broadcast List easily. We let your customers download
+                        your contact quickly. </span>
+                </div>
+            </div>
+            <div class="menu-item">
+                <mat-icon>schedule</mat-icon>
+                <div>
+                    <span class="item-title">WhatsApp Booking Form</span><br>
+                    <span class="item-contain">WhatsApp Appointment bookings for salons, spas, and services.</span>
+                </div>
+            </div>
+            <div class="last-item">
+                <span>
+                    <mat-icon>smart_display</mat-icon>Watch Demo
+                </span>
+                <span>
+                    <mat-icon>forum</mat-icon>Customer support
+                </span>
+            </div>
+        </mat-menu>
+
+        <mat-menu #menuMore="matMenu" class="menu">
+            <div class="menu-item">
+                <mat-icon>forum</mat-icon>
+                <div>
+                    <span class="item-title">Customer support</span><br>
+                    <span class="item-contain">talk to our customer support team in person.</span>
+                </div>
+            </div>
+            <div class="menu-item">
+                <mat-icon>library_books</mat-icon>
+                <div>
+                    <span class="item-title">Guides</span><br>
+                    <span class="item-contain">Learn how to maximize our product to get the most out of it.</span>
+                </div>
+            </div>
+            <div class="menu-item">
+                <mat-icon>alternate_email</mat-icon>
+                <div>
+                    <span class="item-title">About us</span><br>
+                    <span class="item-contain">Learn more how we started and our mission.</span>
+                </div>
+            </div>
+        </mat-menu>
+    </div>
+
+    <div class="options">
+        <button mat-stroked-button [routerLink]="['/login']" (click)="navigationMobile()">Login</button>
+        <button mat-flat-button style="background-color: #725df5;" [routerLink]="['/register']">Sign up</button>
+        <div (click)="setVisible()">
+            <span class="burger-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+
+<div class="menu-smartphone" *ngIf="isVisible==true">
+    <div class="head-menu-smartphone">
+        <div>
+            <div class="logo">
+                <span>Sell</span>
+                <span>Mate</span>
+            </div>
+        </div>
+        <div (click)="setVisible()">
+            <mat-icon>close</mat-icon>
+        </div>
+    </div>
+    <div>
+        <div class="menu-item">
+            <mat-icon>local_mall</mat-icon>
+            <div>
+                <span class="item-title">WhatsApp Order Form</span><br>
+            </div>
+        </div>
+        <div class="menu-item">
+            <mat-icon>link</mat-icon>
+            <div>
+                <span class="item-title">WhatsApp Link Generator</span><br>
+            </div>
+        </div>
+        <div class="menu-item">
+            <mat-icon>cell_tower</mat-icon>
+            <div>
+                <span class="item-title">WhatsApp Broadcast List Manager</span><br>
+            </div>
+        </div>
+        <div class="menu-item">
+            <mat-icon>schedule</mat-icon>
+            <div>
+                <span class="item-title">WhatsApp Booking Form</span><br>
+            </div>
+        </div>
+    </div>
+    <div class="items-smartphone">
+        <span>Pricing</span>
+        <span>FAQ</span>
+        <span>Customer support</span>
+        <span>Guides</span>
+        <span>About us</span>
+    </div>
+    <div class="options-smartphone">
+        <button mat-flat-button [routerLink]="['/signup']" (click)="navigationMobile()">Sign up</button>
+        <div>
+            <span>Existing customer?</span>
+            <span [routerLink]="['/login']" (click)="navigationMobile()">Login</span>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,75 @@
+@import "../../styles.scss";
+
+.contain-login{
+    display: grid;
+    .login-box{
+        >p:nth-child(1){
+            padding-top: 7vh;
+            font-size: xx-large;
+            font-weight: bold;
+            text-align: center;
+        }
+        .form-login{
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2px;
+            >*{
+                width: 30vw;
+                justify-self: center;
+            }
+            >button{
+                padding: 10px;
+                color: white;
+            }
+            >div:last-child{
+                text-align: center;
+                padding-bottom: 7vh;
+            }
+            >.checkbox{
+                >mat-checkbox:checked{
+                    background-color: $primary-color;
+                }
+            }
+        }
+    }
+}
+.disable-button{
+    background-color: $sub-title-color;
+}
+.valid-button{
+    background-color: $primary-color;
+}
+
+@media screen and (max-width: 1300px) {
+    .contain-login{
+        .login-box{
+            .form-login{
+                >*{
+                    width: 50vw;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 800px) {
+    .contain-login{
+        .login-box{
+            .form-login{
+                >*{
+                    width: 70%;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 500px) {
+    .contain-login{
+        .login-box{
+            .form-login{
+                >*{
+                    width: 95%;
+                }
+            }
+        }
+    }
+}

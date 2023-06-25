@@ -1,0 +1,67 @@
+{
+    "trips": [
+        {
+            "from": {
+                "pickupplace": "Trois statues",
+                "quarter": "Mvolye",
+                "town": "Yaoundé",
+                "region": "Centre"
+            },
+             "to": {
+                "pickupplace": "Gendarmerie",
+                "quarter": "Nkol kot",
+                "town": "Djoum",
+                "region": "Sud"
+            },
+             "date":{
+                 "year":"2023",
+                 "month": "06",
+                 "day": "26",
+                 "time": "17"
+             },
+             "numberOfPlaces": 2,
+            "driver": {
+                "nameDriver": "Blaise keyoum",
+                "cniDriver": "0075412",
+                "phoneDriver": "+237677804510"
+                
+            },
+            "vehicle":{
+                "immatriculation": "CE219",
+                "typeVehicle": "SUV"
+            }
+        },
+        {
+            "from": {
+                "pickupplace": "université",
+                "quarter": "Fondem",
+                "town": "Dschang",
+                "region": "Ouest"
+            },
+            "to": {
+                "pickupplace": "Trois statues",
+                "quarter": "Mvolye",
+                "town": "Yaoundé",
+                "region": "Centre"
+            },
+            "date": {
+                "year": "2023",
+                "month": "07",
+                "day": "29",
+                "time": "9"
+            },
+            "numberOfPlaces": 5,
+            "driver": {
+                "nameDriver": "Paul vesper",
+                "cniDriver": "0075412",
+                "phoneDriver": "+237677852856"
+            },
+            "vehicle": {
+                "immatriculation": "NO847",
+                "typeVehicle": "monospace"
+            }
+        }
+       
+        
+    ]
+}

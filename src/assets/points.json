@@ -1,0 +1,52 @@
+{
+    "points": [
+        {
+            "pickupplace": "marché",
+            "quarter": "Ndogpassi",
+            "town": "Douala",
+            "region": "Littoral"
+        },
+        {
+            "pickupplace": "Pharmacie St Nicholas",
+            "quarter": "Ndogpassi",
+            "town": "Douala",
+            "region": "Littoral"
+        },
+        {
+            "pickupplace": "Univeristé",
+            "quarter": "Fondemekuet",
+            "town": "Dschang",
+            "region": "Ouest"
+        },
+        {
+            "pickupplace": "Gendarmerie",
+            "quarter": "Mendong",
+            "town": "Yaoundé",
+            "region": "Centre"
+        },
+        {
+            "pickupplace": "rond-point",
+            "quarter": "damas",
+            "town": "Yaoundé",
+            "region": "Centre"
+        },
+        {
+            "pickupplace": "Trois statues",
+            "quarter": "Mvolye",
+            "town": "Yaoundé",
+            "region": "Centre"
+        },
+        {
+            "pickupplace": "Total",
+            "quarter": "Domayo",
+            "town": "Maroua",
+            "region": "Extrême nord"
+        },
+        {
+            "pickupplace": "Marché",
+            "quarter": "Para",
+            "town": "Maroua",
+            "region": "Extrême nord"
+        }
+    ]
+}
